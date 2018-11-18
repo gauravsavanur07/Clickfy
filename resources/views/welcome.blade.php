@@ -41,7 +41,20 @@
         <li><a href="badges.html">Register</a></li>
 
       </ul>
-<div class
+      <?php
+
+            $urlArticles = file_get_contents('https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=3eb2d5e47ad34c89ac518da077edc5e8');
+            $urlArticlesArray = json_decode($urlArticles, true);
+
+             $articles = $urlArticlesArray['articles'];
+             for($i = 0; $i < count($articles); $i++) {
+               $sites = $urlArticlesArray['articles'][$i];
+               echo '<img src="'.$sites['urlToImage'].'">';
+
+               }
+
+             ?>
+
 </body>
 
 
