@@ -42,11 +42,14 @@
 
       </ul>
     <div class="row">
-    <div class="col s6 offset-s6 ">
+    <div class="col s6 offset-s6  m6 offset-m6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title">News Feed</span>
           <?php
+
+
+
 
                 $urlArticles = file_get_contents('https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=3eb2d5e47ad34c89ac518da077edc5e8');
                 $urlArticlesArray = json_decode($urlArticles, true);
